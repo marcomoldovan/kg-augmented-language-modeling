@@ -23,3 +23,30 @@ exclude_lines = [
     "raise NotImplementedError()",
     "if __name__ == .__main__.:",
 ]
+
+[tool.poetry]
+name = "kg-augmented-language-modeling"
+version = "0.1.0"
+description = "Leveraging knowledge graphs to learn a more factually grounded language model for retrieval and question answering downstream tasks."
+authors = ["Marco Moldovan"]
+readme = "README.md"
+packages = [{include = "kg_augmented_language_modeling"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "2.0.0"
+lightning = "2.0.0"
+hydra-core = "1.3.2"
+hydra-colorlog = "1.2.0"
+hydra-optuna-sweeper = "1.2.0"
+wandb = "0.15.0"
+pyrootutils = "^1.0.4"
+pre-commit = "^3.2.2"
+rich = "^13.3.4"
+pytest = "^7.3.1"
+sh = "^2.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
